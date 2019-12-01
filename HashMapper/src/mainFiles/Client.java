@@ -25,9 +25,10 @@ public class Client {
 		}
 		
 		System.out.println("\n\n\n s or S means U would like to search for some with the number"+"\n"+
-		"d or D means That U could delete someone."+
+		"d or D means That U could delete someone.\n"+
 		"e or E means ending this program instantly"+
 		"\n p or P means printing every single user recorded"+
+		"\n a or A means adding another record to the whole db"+
 		"\n Press Enter Every Time You Complete Your Command And Follow Instructions\n\n\n");/////////////here to complete////////////
 		
 		while (true) {
@@ -52,8 +53,10 @@ public class Client {
 			else if (instruction.equalsIgnoreCase("E")) {
 				System.exit(0);
 			}
-			
-			else {System.out.println("Check your command and refer to the command");}
+			else if (instruction.equalsIgnoreCase("A")) {
+				map1.store(new Hashitem(in.next(),in.next(),in.next()) );
+			}
+			else {System.out.println("Check your command and refer to the command\nBack To Top");}
 		}
 	}
 }
